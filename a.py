@@ -1,4 +1,3 @@
-
 yazi = 1234
 print(yazi)
 ornek_bool = True
@@ -70,5 +69,119 @@ print(metin2.find('a'))
 #kullanicidan 5 adet sayi aliniz ve ortalamasini ekrana yaziniz.
 #input olarak bir metin alan, ve title metodunu kullanmadan title haline ceviren kodu yaziniz. (upper lower ile)
 
-for i in range(13):
-    print(i, metin2[1])
+for i in range(len(metin2)):
+    print(i, metin2.find('a'))
+sozcuk=input('metin giriniz: ')
+sozcuk=sozcuk[0].upper()+sozcuk[1::].lower()
+print(sozcuk)
+sozcuk2 = input('sozcuk giriniz: ')
+counter = 0
+for i in range(len(sozcuk2)):
+        if sozcuk2[i] == 'a':
+                counter += 1
+toplam=0
+print(counter)
+for i in range(5):
+        number=input('bir sayi giriniz: ')
+        toplam+=int(number)
+print(toplam/5)
+liste=(1,2,3,4,5,6,7,8,9,10)
+print(liste[4])
+print(liste[1::2])
+print(liste[::2])
+
+print(len(liste))
+print(sum(liste))
+print(max(liste))
+print(min(liste))
+
+#yukaridaki listenin ortalamasini print ediniz.
+#yukaridaki listenin ilk yarisinin toplami ile son yarisinin toplaminin farkini print ediniz.
+#yukaridaki listenin en buyuk ve kucuk sayisinin farkini print ediniz.
+
+print(sum(liste)/len(liste))
+print(max(liste)-min(liste))
+ilkyarisi=liste[0:len(liste)//2:1]
+sonyarisi=liste[len(liste)//2:len(liste):1]
+print(sum(ilkyarisi)-sum(sonyarisi))
+liste2 = [1,2,3,4,5,6,7,8,9,10]
+liste3 = [97,98,99]
+yeniliste=liste2+liste3
+print(yeniliste)
+print(list(range(20)))
+print(list(range(10,20)))
+print(list(range(10,20,2)))
+
+#range metodu ile 0,100 arasindaki tum cift sayilari ekrana basiniz.
+#range metodu ile 100,200 arasindaki tum tek sayilari ekrana basiniz.
+#1000'den 0'a kadar 100'un katlarini tersten ekrana basiniz.
+
+print(list(range(0,100,2)))
+print(list(range(101,200,2)))
+print(list(range(1000,0,-100)))
+
+#0'dan 50'ye kadar, tum cift sayilarin, karesini ekrana basiniz.
+
+for liste4 in range(0,51,2):
+        print(liste4**2)
+liste5 = [1, 2]
+print(liste5)
+liste5.append(10)
+print(liste5)
+liste5.insert(5,20)
+print(liste5)
+liste5.sort()
+print(liste5)
+print(liste5.pop())
+print(liste5)
+print(liste5.pop(0))
+
+#insert kullanarak, append(99) yapiniz.
+
+print(liste5)
+liste5.insert(len(liste5),99)
+print(liste5)
+print(liste5)
+liste5.reverse()
+print(liste5)
+liste6=(1,2,3,4,5)
+yeniliste2=[]
+for i in range(len(liste6)):
+        yeniliste2.append(liste6[i]**2)
+print(yeniliste2)
+yeniliste2=[i**2 for i in liste6]
+print(yeniliste2)
+yasin=int(input('yasinizi giriniz: '))
+
+if yasin<0 or yasin>120:
+        print('yasiniz gecersiz.')
+elif yasin>=0 and yasin <= 7:
+        print('ilkokula gidiyorsun.')
+elif yasin>=8 and yasin<=13:
+        print('ortaokula gidiyorsun.')
+elif yasin>=14 and yasin<=18:
+        print('liseye gidiyorsun.')
+elif yasin>=19 and yasin<=25:
+        print('universiteye gidiyorsun.')
+else:
+        print('ise gidiyorsun.')
+sayi2 = 0
+while sayi2 < 100:
+        print(sayi2)
+        sayi2 = sayi2 + 2
+        if sayi > 50:
+                break
+
+number2 = 0 
+liste7 = []
+while number2 != -1:
+        number2 = int(input('bir sayi giriniz: '))
+        if number2 != -1:
+                liste7.append(number2)
+
+print(liste7)
+print(max(liste7))
+print(min(liste7))
+print(sum(liste7))
+print(len(liste7))
+print(sum(liste7) / len(liste7))
