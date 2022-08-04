@@ -191,5 +191,44 @@ def kelimeayirma():
     print()
     print('----------------------------------------------------')
 
+def examplerecursion(n):
+    if n == 0:
+        return
+    print(n)
+    examplerecursion(n-1)
 
-kelimeayirma()
+examplerecursion(10)
+
+print('---')
+
+def examplerecursion(n):
+    if n == 0:
+        return
+    print(n)
+    examplerecursion(n-1)
+    print(n)
+
+examplerecursion(3)
+
+"""
+
+5! = 5 . 4!
+4! = 4 . 3!
+3! = 3 . 2!
+2! = 2 . 1!
+1! = 1 . 0!
+n! = n . (n-1)!
+
+
+"""
+
+
+def factorial(n):
+    if n == 0:
+        return 1
+    if n == 1:
+        return 1
+    return n * factorial(n-1)
+
+
+print(factorial(0))
